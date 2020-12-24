@@ -6062,3 +6062,55 @@ min-height: 100%;}
   margin-bottom: 30px;
 }
 /*END OTHER HOME PAGE DESIGN*/
+
+
+
+.contact-info1 i {
+    width: 150px;
+    height: 150px;
+    padding-top: 17px;
+    border-radius: 50%;
+    background: #F4C430;
+    color: #000;
+    font-size: 25px;
+    margin-top: 5px;
+}
+.contact-info2 i {
+    width: 150px;
+    height: 150px;
+    padding-top: 17px;
+    border-radius: 50%;
+    background: #87CEEB;
+    color: #000;
+    font-size: 25px;
+    margin-top: 5px;
+}
+.contact-info3 i {
+    width: 150px;
+    height: 150px;
+    padding-top: 17px;
+    border-radius: 50%;
+    background: #90ee90;
+    color: #000;
+    font-size: 25px;
+    margin-top: 5px;
+}
+.contact-info {
+    /* border-bottom: 1px solid #ececec; */
+    padding: 25px 0px;
+    margin-bottom: 0px;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+
+.contact-info i {
+    width: 150px;
+    height: 150px;
+    padding-top: 17px;
+    border-radius: 50%;
+    background: #2193f1;
+    color: #fff;
+    font-size: 25px;
+    margin-top: 5px;
+}
