@@ -5966,3 +5966,99 @@ footer.bg-dark .footer-bottom a {
  *  04.END  ABOUT US DESIGN
  * ----------------------------------------------------------------------------------------
 */
+/*START OTHER HOME PAGE DESIGN*/
+.slider { position: relative;height: 700px  }
+.slider:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
+  content: "";
+  left: 0;
+  top: 0;
+}
+.hero-text {
+  padding-top: 200px;
+}
+.hero-text h2 {
+color: #fff;
+font-size: 45px;
+font-weight: 400;
+letter-spacing: 2px;
+line-height: 70px;
+text-transform: uppercase;
+}
+.sub_title { font-size: 30px; }
+.get-start-button { width: 20%; }
+@media only screen and (max-width:480px) { 
+    .hero-text h2 {
+        font-size: 40px;
+        line-height: 56px;
+    }
+}
+@media only screen and (max-width:360px) { 
+    .hero-text h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+.hero-text p {
+color: #fff;
+margin: auto auto 15px;
+width: 80%;
+}
+@media only screen and (max-width:768px) { 
+    .hero-text p { width: 100% }
+
+}
+@media only screen and (min-width:1300px) { 
+    .html-video { height: 100%; }
+}
+
+.html-video {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.html-video:before {
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
+  content: "";
+  left: 0;
+  top: 0;
+}
+.slider-caption {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    z-index: 15;
+    -webkit-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+}
+.slider-caption p {
+  width: 60%;
+}
+@media only screen and (max-width:768px) { 
+.slider-caption p  { width: 100% }
+}
+video { min-width: 100%;
+min-height: 100%;}
+
+.company-name {
+
+}
+
+.company-name-subtext h3 {
+  color : white !important;
+  margin-bottom: 30px;
+}
+/*END OTHER HOME PAGE DESIGN*/
