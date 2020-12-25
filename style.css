@@ -478,20 +478,20 @@ input {
 }
 
 .default-padding {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .default-padding-top {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .default-padding-bottom {
-  padding-bottom: 120px;
+  padding-bottom: 100px;
 }
 
 .default-padding.bottom-less {
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 90px;
 }
 
@@ -6113,4 +6113,84 @@ min-height: 100%;}
     color: #fff;
     font-size: 25px;
     margin-top: 5px;
+}
+
+.serv-section-2 {
+    position: relative;
+    border: 1px solid #eee;
+    background: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 22px;
+}
+
+.serv-section-2-act:before {
+    background: #e60012;
+}
+
+.serv-section-2-icon {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    max-width: 100px;
+    z-index: 1;
+    text-align: center;
+}
+
+.serv-section-2-icon i {
+    color: #fff;
+    font-size: 48px;
+    line-height: 65px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+.serv-section-2:before {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: 0;
+    content: " ";
+    width: 120px;
+    height: 120px;
+    background: #086AD8;
+    border-bottom-left-radius: 136px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+.walkin-text {
+    font-weight: 600;
+    color: #0e2b3d;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.section-heading-line-left {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #086AD8;
+    border-radius: 25%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.services-area .job-tabs ul li a {
+  padding: 13px !important;
+}
+
+.content-qual {
+  padding: 0px !important;
+}
+
+.content-resp {
+  padding : 0px !important;
+  padding-top: 25px !important;
+}
+
+.services-area .job-tabs .tab-pane::after {
+  position: relative !important;
 }
