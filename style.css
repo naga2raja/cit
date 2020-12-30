@@ -3793,6 +3793,10 @@ body,
   z-index: -1;
 }
 
+.services-area .services-tabs .fixed-height::after {
+  height: auto !important;
+}
+
 .services-area .services-tabs .info .content {
   position: relative;
 }
