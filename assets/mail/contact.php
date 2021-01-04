@@ -11,7 +11,7 @@ if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 
 $name     = $_POST['name'];
 $email    = $_POST['email'];
-$phone     = $_POST['phone'];
+$phone    = $_POST['phone'];
 $comments = $_POST['comments'];
 
 if(trim($name) == '') {
@@ -42,7 +42,7 @@ if(get_magic_quotes_gpc()) {
 // Example $address = "joe.doe@yourdomain.com";
 
 //$address = "example@themeforest.net";
-$address = "Info@yourdomain.com";
+$address = "hr@cabcsgroup-india.com";
 
 
 // Configuration option.

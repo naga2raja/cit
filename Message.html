@@ -94,7 +94,7 @@
 
     <!-- Header 
     ============================================= -->
-    <header id="home">
+     <header id="home">
 
         <!-- Start Navigation -->
         <nav class="navbar navbar-default active-border navbar-sticky bootsnav">
@@ -133,7 +133,7 @@
                             <a href="about-us.html">Who we are</a>
                         </li>   
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >What we do</a>
+                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >What we do</a>
                             <ul class="dropdown-menu">
                                 <li><a href="services.html">Services</a></li>
                                 <li><a href="innovations.html">Innovations</a></li>
@@ -142,7 +142,7 @@
                         </li>
                         <li><a href="careers.html">Careers</a></li>
                         <li>
-                            <a href="contact.html" class="active">Contact</a>
+                            <a href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -150,145 +150,67 @@
         </nav>
         <!-- End Navigation -->
     </header>
-    <!-- End Header -->
+    <!-- End Header -->   
 
-    <!-- Start Breadcrumb 
-    ============================================= -->
-    <div class="breadcrumb-area shadow dark bg-fixed text-light" style="background-image: url(assets/img/contact/contact-us-bg.jpg);">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-lg-6">
-                    <h2>Contact Us</h2>
-                </div>                
+    <!----start Message----->
+
+<!------start Message from Chairman----->
+   <div class="services-area carousel-shadow default-padding bg-cover">
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col-lg-8 col-md-12 info">
+                     <div class="site-heading text-center" id="MessageFromOurLeaders">
+                        <h4> Message from Chairman</h4>
+                        <!-- <h2> What They Say </h2> -->
+                    </div>    
+                    <div class="content">            
+                    <p>Since its establishment in 1976, we are continuing to send out systems that support people's social life. We have deeply long relationships with our customers and have developed businesses focusing on the development of financial systems such as banks, credits, life insurance and non-life insurance while building reliable relationships of trust. In addition, in recent years we have expanded our business to planning and development of medical applications and mobile applications. We will continue to provide a one-stop IT solution that is optimal for a wide variety of societies by establishing a flexible and solid group company structure to meet customer's new needs.</p>  
+                </div>
+                </div>   
+                <div class="col-lg-4 col-md-12">
+                    <img src="assets/img/about/nakamura.jpg">
+                </div> 
             </div>
         </div>
     </div>
-    <!-- End Breadcrumb -->
+    <!------ End Message from Chairman--->
 
-    <!-- Start Contact 
-    ============================================= -->
-    <div class="contact-area overflow-hidden default-padding">
-        <div class="container">
-            <div class="row">
+    <!----start Message from President---->
 
-                <div class="col-lg-6 contact-form-box">
+<div class="services-area carousel-shadow default-padding bg-cover" id="MESSAGE FROM PRESIDENT">
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col-lg-4 col-md-12" >
+                    <img src="assets/img/about/arumugam.jpg">
+                </div>     
+                <div class="col-lg-8 col-md-12 info" >
+                     <div class="site-heading text-center" id="MessageFromOurLeaders">
+                        <h4> Message from President</h4>                       
+                    </div>   
                     <div class="content">
-                        <div class="heading">
-                            <h2>Need Help?</h2>
-                            <p>Reach out to the world’s most reliable IT services.</p>
-                        </div>
-                         
-                        <form action="assets/mail/contact.php" method="POST" class="contact-form">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input class="form-control" id="name" name="name" placeholder="Name" type="text">
-                                        <span class="alert-error"></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input class="form-control" id="email" name="email" placeholder="Email*" type="email">
-                                        <span class="alert-error"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text">
-                                        <span class="alert-error"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group comments">
-                                        <textarea class="form-control" id="comments" name="comments" placeholder="Please describe what you need."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <button type="submit" name="submit" id="submit">
-                                        Get a free consultation
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- Alert Message -->
-                            <div class="col-md-12 alert-notification">
-                                <div id="message" class="alert-msg"></div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 info">
-                    <div class="contact-tabs">
-                        <ul id="tabs" class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a href="" data-target="#tab1" data-toggle="tab" class="active nav-link">
-                                    Address
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" data-target="#tab2" data-toggle="tab" class="nav-link">
-                                    Google Maps
-                                </a>
-                            </li>
-                        </ul>
-                        <div id="tabsContent" class="tab-content">
-                            <div id="tab1" class="tab-pane fade active show">
-                                <ul>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                        </div>
-                                        <div class="info">
-                                            <p>
-                                                Our Location
-                                                <span>CRN Square, 2nd Floor, No.15, Kasturba Road, Bangalore 560-001.</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="fas fa-envelope-open"></i>
-                                        </div>
-                                        <div class="info">
-                                            <p>
-                                                Send Us Mail
-                                                <span>arumugamb@cabcsgroup-india.com</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="fas fa-phone"></i>
-                                        </div>
-                                        <div class="info">
-                                            <p>
-                                                Call Us
-                                                <span>+91 80565 55271</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id="tab2" class="tab-pane fade">
-                               <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14767.262289338461!2d70.79414485000001!3d22.284975!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1424308883981"></iframe> -->
-                               <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=MSC%20Group%20india%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:400px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:600px;}</style></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+                        <p class="info-details">I would like welcome you to our Website and would like to Thank you for your interest in  Cabc's Group India.</p>  
+                    <h4>Our History</h4>
+                    <p class="info-details"> Cabc's Group is a renowned Japanese group of companies established in 1976, having more than four decades of experience in IT Services, Consulting and AI Developments in various domains.  Cabc's Group not only does the IT Services but builds & nurtures relationships and customer trust by optimizing and providing flexible solutions.  Cabc's Group India is a partner company of the  Cabc's Group and have opened its business in Bangalore, India to enhance the business and provide services from India.</p>
+                  </div>
+              </div> 
+              <div class="col-lg-12 col-md-12 info">
+                <div class="content">
+                    <h4>Our Values</h4>
+                    <p class="info-details"> Cabc's Group India believes in the core values of  Cabc's Group and follows the same. We believe in excellence in terms of Quality, Modernization & Integrity of our Business Models. In this modern revolutionary world where Agility, Sustainability & Adoptability are the basic requirement for any Technology, we stand out from the crowd with our Esteemed Team Members, Consultants & Stake holders. Maintaining the Customer relationships always beyond the expectation level is our motto.</p>
+                     <h4>Our Experience</h4>
+                    <p class="info-details">In this current tech-revolutionary era where the business is agile & versatile, our key strength is rich experience in Emerging along with Traditional platforms & our innovations enable smarter enterprises for our customers. We have a pool of Technology experts in the modern niche technologies like Artificial Intelligence, Machine Learning, Next Generation Networks, Data Analytics, Embedded Systems, Multimedia, Smart Phone Frameworks, Business Automation, Security etc. We have the best and the brightest professionals with dedication to work and positive attitude, they are the real asset for us. Professionalism with core values of honesty and strong work ethics is the strength of our team. We are a family and we always mentor each other for Skills upbringing, Innovations & Resourcefulness.</p>
+                    <p class="info-details">On behalf of  Cabc's Group India, I would like to appreciate for understanding our values and believing in us. It is always a privilege to have business with you.</p>                    
+                </div>                  
+              </div>  
+              </div>
         </div>
-    </div>
-    <!-- End Contact Area -->
+    </div> 
+    <!------End Message from President----->                  
+                             
+    <!--- End Message ------>
 
-      <!-- Start Footer 
+    
+     <!-- Start Footer 
     ============================================= -->
    
      <footer class="bg-dark text-light">
@@ -445,6 +367,5 @@
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
-
 </body>
 </html>
