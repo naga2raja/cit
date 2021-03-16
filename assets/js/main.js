@@ -1,7 +1,7 @@
 /* ===================================================================
     
     Author          : Valid Theme
-    Template Name   : Tanda - IT Solutions Template
+    Template Name   : CABC'S Group India Website
     Version         : 1.0
     
 * ================================================================= */
