@@ -2356,6 +2356,19 @@ body,
   margin-left: 20px;
 }
 
+.main-video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: inline-block;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 /* Nice Select CSS */
 .nice-select {
   -webkit-tap-highlight-color: transparent;
