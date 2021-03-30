@@ -126,14 +126,37 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                        <!-- Menu for changing language to Japanese/English Dropdown -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <img id="imgNavSel" src="assets/img/Grossbritanien.gif" alt="..."
+                                    class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavSel">EN</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a id="navJap" class="language" href="jp/index.html">
+                                            <img id="imgNavJap" src="assets/img/Japan.gif" alt="..." class="img-thumbnail icon-small">
+                                            &nbsp;&nbsp;<span id="lanNavJap">日本語</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="navEng" class="language" href="">
+                                            <img id="imgNavEng" src="assets/img/Grossbritanien.gif" alt="..."
+                                            class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavEng">English</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- End of Language change Menu -->
                         <li class="dropdown">
                             <a href="index.html">Home</a>
                         </li>
                         <li class="dropdown">
-                            <a href="about-us.html">Who we are</a>
+                            <a href="about-us.html"  class="active">Who we are</a>
                         </li>   
                         <li class="dropdown">
-                            <a href="services.html" class="dropdown-toggle active" data-toggle="dropdown" >What we do</a>
+                            <a href="services.html" class="dropdown-toggle" data-toggle="dropdown" >What we do</a>
                             <ul class="dropdown-menu">
                                 <li><a href="services.html">Services</a></li>
                                 <li><a href="innovations.html">Innovations</a></li>
