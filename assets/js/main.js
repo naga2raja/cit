@@ -372,5 +372,11 @@
             });
         });
 
+        // Function to open the map tab on click of View Map link
+        var url = document.location.toString();
+        if (url.match('#')) {
+            $('#' + url.split('#')[1]).tab('show');
+        }
+
     }); // end document ready function
 })(jQuery); // End jQuery
