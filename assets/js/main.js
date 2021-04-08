@@ -15,7 +15,7 @@
             # Auto website language setting based on Requestor Location
 		======================================================================*/
 		//get the path of URL
-		var domainName="http://localhost/cit/";
+		var domainName="http://cit.tnagaraja.in/";
 		var pathName = $(location).attr('pathname');
 		var parts = pathName.split("/");		
 		var countryCode = "jp";
@@ -56,7 +56,7 @@
 					if (json.country_code ==  "JP" && sessionStorage.getItem("langEngClick") != "true" && (pathContainsJP == -1) && sessionStorage.getItem("firstArrivedPath") == null){
 						
 						//HTTP redirect to Japanese site
-						var url= domainName + countryCode + '/' + parts[2];
+						var url= domainName + countryCode + '/' + parts[1];
 						window.location.replace(url);
 							
 						//After reaching Japanese Website,  set proper session storage values.
@@ -67,7 +67,7 @@
 					else if (json.country_code !=  "JP" && (pathContainsJP != -1) && sessionStorage.getItem("langEngClick") != "true" && sessionStorage.getItem("firstArrivedPath") == null){
 						
 						//HTTP redirect to English site
-						var url= domainName + parts[3];							
+						var url= domainName + parts[2];							
 						window.location.replace(url);
 																			
 						//After reaching English Website, set proper session storage values.
