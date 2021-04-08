@@ -15,7 +15,7 @@
             # Auto website language setting based on Requestor Location
 		======================================================================*/
 		//get the path of URL
-		var domainName="http://localhost/cit/";
+		var domainName="http://cit.tnagaraja.in/cit/";
 		var pathName = $(location).attr('pathname');
 		var parts = pathName.split("/");		
 		var countryCode = "jp";
