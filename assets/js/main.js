@@ -10,8 +10,92 @@
     "use strict";
 
     $(document).on('ready', function() {
-
-
+			
+		/* =====================================================================
+            # Auto website language setting based on Requestor Location
+		======================================================================*/
+		//get the path of URL
+		var domainName="http://localhost/cit/";
+		var pathName = $(location).attr('pathname');
+		var parts = pathName.split("/");		
+		var countryCode = "jp";
+		var pathContainsJP = pathName.indexOf(countryCode);
+		//Set access key for Requester Lookup: Look up the data behind the IP address your API request is coming from.
+		var access_key = '5f60e47920c11805ade447c0357d1a9f';
+		
+		//On Click of Logo, set session storage.
+		$(".navbar-brand").click(function(){
+			sessionStorage.setItem("langEngClick", "true");			
+		});
+		//On Click of Home, set session storage.
+		$(".active").click(function(){
+			sessionStorage.setItem("langEngClick", "true");			
+		});
+			
+		//On Click of English Language setting, set session storage.
+		$("#navEng").click(function(){
+			sessionStorage.setItem("langEngClick", "true");			
+		});
+			
+		//On Click of Home in other pages except index.html, setting session storage.
+		$(".dropdown").click(function(){
+			sessionStorage.setItem("langEngClick", "true");			
+		});
+			
+		
+		/*API call is made only when the visitor lands in the website for the firstime.
+		Language setting are not specifically selected by the visitor.	*/		
+		if (sessionStorage.getItem("langEngClick") != "true" && sessionStorage.getItem("firstArrivedPath") === null){
+			//Get the country_code of the requestor from Ipstack API via jQuery.ajax
+			$.ajax({
+				url: 'http://api.ipstack.com/check' + '?access_key=' + access_key + '&fields=country_code& output = json' ,   
+				dataType: 'json',
+				success: function(json) {
+					
+					//In case if requester is from Japan and initial web url is for English site
+					if (json.country_code ==  "JP" && sessionStorage.getItem("langEngClick") != "true" && (pathContainsJP == -1) && sessionStorage.getItem("firstArrivedPath") == null){
+						
+						//HTTP redirect to Japanese site
+						var url= domainName + countryCode + '/' + parts[2];
+						window.location.replace(url);
+							
+						//After reaching Japanese Website,  set proper session storage values.
+						sessionStorage.setItem("firstArrivedPath", pathName);
+						sessionStorage.setItem("langEngClick", "false");
+					}					
+					//In case if requester is from any other country except Japan and initial web url is for Japanese site
+					else if (json.country_code !=  "JP" && (pathContainsJP != -1) && sessionStorage.getItem("langEngClick") != "true" && sessionStorage.getItem("firstArrivedPath") == null){
+						
+						//HTTP redirect to English site
+						var url= domainName + parts[3];							
+						window.location.replace(url);
+																			
+						//After reaching English Website, set proper session storage values.
+						sessionStorage.setItem("firstArrivedPath", pathName)
+						sessionStorage.setItem("langEngClick", "false");
+					}
+					//Incase of improper API response, allow the first loaded URL.
+					else if(json['error']){
+						console.log("API returns with no response due to "+ json.error.info);	
+						
+						//After reaching website,  set proper session storage values.
+						sessionStorage.setItem("firstArrivedPath", pathName)
+						sessionStorage.setItem("langEngClick", "false");
+					}
+					//In case if requester's country and initial website language is same, allow the first loaded URL.
+					else{
+						//After reaching website,  set proper session storage values.
+						sessionStorage.setItem("firstArrivedPath", pathName)
+						sessionStorage.setItem("langEngClick", "false");							
+					}
+				},
+				//Incase of AJAX call failure.
+				error: function(jqHXR, textStatus , errorThrow){
+					console.log("API call fails due to stated reasons. Text status : " + textStatus  + " Text errorThrow : " + errorThrow);	
+				}
+			}); //End of ajax call
+		}//End of If condition
+	
         /* ==================================================
             # Wow Init
          ===============================================*/
