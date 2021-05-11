@@ -18,7 +18,7 @@
         var domainName   = window.location.origin;
         var pathName = $(location).attr('pathname');
         var parts = pathName.split("/");
-        var pathContainsJP = pathName.indexOf('/jp/');
+        var pathContainsJP = pathName.indexOf('jp');
         // Set access key for Requester Lookup: Look up the data behind the IP address your API request is coming from.
         var access_key = '5f60e47920c11805ade447c0357d1a9f';
 
