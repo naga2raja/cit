@@ -16,10 +16,9 @@
         ======================================================================*/
         // Get the path from URL
         var domainName   = window.location.origin;
-        var pathName = $(location).attr('pathname');
-        var parts = pathName.split("/");
-        var pathContainsJP = pathName.indexOf('jp');
-        // Set access key for Requester Lookup: Look up the data behind the IP address your API request is coming from.
+        var pathURL = window.location.href;
+        var pathContainsJP = pathURL.indexOf('/jp/');        
+		// Set access key for Requester Lookup: Look up the data behind the IP address your API request is coming from.
         var access_key = '5f60e47920c11805ade447c0357d1a9f';
 
         // On Click of Logo, set session storage.
@@ -50,15 +49,17 @@
                 success: function(json) {
                     // In case if requester is from Japan and initial web url is for English site
                     if (json.country_code ==  "JP" && sessionStorage.getItem("langEngClick") != "true" && (pathContainsJP == -1) && sessionStorage.getItem("firstArrivedPath") == null){
-                        
-                        // HTTP redirect to Japanese site
-                        var url= domainName  + '/jp' + pathName;
+                        //Append JP pathname to Englist site path name.
+						var jPathName = domainName + "/jp";
+						
+                        // HTTP redirect to Japanese site						
+                        var url= pathURL.replace(domainName, jPathName);
                         window.location.replace(url);
                     }
                     // In case if requester is from any other country except Japan and initial web url is for Japanese site
                     else if (json.country_code !=  "JP" && (pathContainsJP != -1) && sessionStorage.getItem("langEngClick") != "true" && sessionStorage.getItem("firstArrivedPath") == null){
                         // Replace JP pathname to Englist site path name 
-                        ePathName= pathName.replace("/jp", "");
+                        ePathName= pathURL.replace("/jp", "");
                         
                         // HTTP redirect to English site
                         var url= domainName + ePathName;
@@ -69,14 +70,14 @@
                         console.log("API returns with no response due to "+ json.error.info);
                     }                    
                     // After reaching proper Website,  setting proper session storage values.
-                    sessionStorage.setItem("firstArrivedPath", pathName);
+                    sessionStorage.setItem("firstArrivedPath", pathURL);
                     sessionStorage.setItem("langEngClick", "false");
                 },
                 // Incase of AJAX call failure.
                 error: function(jqHXR, textStatus , errorThrow){
                     console.log("API call fails due to stated reasons. Text status : " + textStatus  + " Text errorThrow : " + errorThrow);
                     // After reaching default Website,  setting proper session storage values.
-                    sessionStorage.setItem("firstArrivedPath", pathName);
+                    sessionStorage.setItem("firstArrivedPath", pathURL);
                     sessionStorage.setItem("langEngClick", "false");
                 }
             }); // End of ajax call
