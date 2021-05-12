@@ -59,10 +59,9 @@
                     // In case if requester is from any other country except Japan and initial web url is for Japanese site
                     else if (json.country_code !=  "JP" && (pathContainsJP != -1) && sessionStorage.getItem("langEngClick") != "true" && sessionStorage.getItem("firstArrivedPath") == null){
                         // Replace JP pathname to Englist site path name 
-                        ePathName= pathURL.replace("/jp", "");
+                        var url= pathURL.replace("/jp", "");
                         
-                        // HTTP redirect to English site
-                        var url= domainName + ePathName;
+                        // HTTP redirect to English site                       
                         window.location.replace(url);
                     }
                     // Incase of improper API response, allow the first loaded URL.
